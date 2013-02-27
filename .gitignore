@@ -1,7 +1,15 @@
 #Ignore everything by default
 *
 
-#Basic config files
-!.gitignore
-!.zshrc
+#Vim configs
 !.vimrc
+
+#Git configs
+!.gitignore_global
+!.gitconfig
+!.gitignore
+
+#Zshrc configs
+!.zshrc
+!.zprofile
+!.zprezto/*

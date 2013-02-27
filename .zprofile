@@ -1,0 +1,1 @@
+/Users/alxjrvs/.zprezto/runcoms/zprofile
