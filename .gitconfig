@@ -2,6 +2,6 @@
 	name = Alex Jarvis
 	email = alxjrvs@gmail.com
 [core]
-	excludesfile = /Users/alxjrvs/.gitingore_global
+	excludesfile = /Users/alxjrvs/.gitignore_global
 [push]
 	default = simple

@@ -29,10 +29,15 @@ command -nargs=0 OpenNERDTree :call OpenNERDTree()
 nmap <Leader>n :OpenNERDTree<CR>
 
 "programming
-Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'Townk/vim-autoclose'
+
+"ctags
+Bundle 'majutsushi/tagbar'
+Bundle 'vim-scripts/AutoComplPop'
+Bundle 'vim-scripts/AutoTag'
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 "indent-guides
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -63,6 +68,7 @@ Bundle 'benmills/vimux'
 map rp :PromptVimTmuxCommand
 
 " Run last command executed by RunVimTmuxCommand
+" k
 map rl :RunLastVimTmuxCommand
 
 " Inspect runner pane
