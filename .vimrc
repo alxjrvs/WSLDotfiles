@@ -45,6 +45,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'vim-scripts/AutoTag'
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
+nmap tb :TagbarToggle<CR><C-w>l
+
 
 "indent-guides
 Bundle 'nathanaelkane/vim-indent-guides'
