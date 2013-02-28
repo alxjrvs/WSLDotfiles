@@ -47,9 +47,9 @@ alias write='cd ~/Writing/'
 #Git Alias
 
 alias git='hub'
-alias gpom='git push origin master'
+alias gp='git push'
 alias gs='git status'
-alias gpum='git pull origin master'
+alias gp='git pull'
 alias gphm='git push heroku master'
 alias hreload='heroku pg:reset DATABASE && heroku run rake db:migrate'
 alias hr='heroku run'
@@ -63,6 +63,7 @@ alias gemgone='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
 alias reload='rake db:drop && rake db:migrate && rake db:seed'
 alias ruhrack='rackup -p9292'
 alias reload='rake db:drop && rake db:migrate && rake db:seed'
+#
 #alias ctags="`brew --prefix`/bin/ctags"
 
 alias tks="tmux kill-server"
@@ -80,6 +81,7 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serve
 # Expansions
 alias ls='ls -AFGp'
 alias tree='tree -aCFl --charset=UTF8 --du --si'
+
 # Tmux Fuckery
 alias tmux="tmux -2"
 

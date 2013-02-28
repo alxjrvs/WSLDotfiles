@@ -6,9 +6,12 @@ set wrap
 set hidden      "improve history and buffer
 set history=1000
 set number
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
 set backspace=2
 filetype off
 
+"vundle
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
