@@ -36,6 +36,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'Townk/vim-autoclose'
 
+"commandT
+
+Bundle 'wincent/Command-T'
+
 "ctags
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/AutoComplPop'
@@ -121,10 +125,11 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 "" open new v split and switch to it
 nnoremap <leader>w <C-w>v<C-w>l
+"open new h split and switch to it
 nnoremap <leader>s <C-w>s<C-w>l
 
 "" open new tab and switch to it
-nnoremap <leader>t :tabe <return>
+"nnoremap <leader>t :tabe <return>
 
 set encoding=utf-8
 
