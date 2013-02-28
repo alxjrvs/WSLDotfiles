@@ -12,6 +12,6 @@
 #Zshrc configs
 !.zshrc
 !.zprofile
-!.zprezto/*
+!.zprezto/
 #!.zprezto/runcoms/zshrc
 #!.zprezto/runcoms/zprofile
