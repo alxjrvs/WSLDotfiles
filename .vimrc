@@ -6,9 +6,29 @@ set wrap
 set hidden      "improve history and buffer
 set history=1000
 set number
-set listchars=tab:>-,trail:~,extends:>,precedes:<
-set list
 set backspace=2
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set wrap
+set lbr
+set encoding=utf-8
+
+
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+map ; :
+noremap ;; ;
+inoremap kj <esc>
+imap <C-a> <esc>
+
+
+let mapleader = " "
+
 filetype off
 
 "vundle
@@ -42,7 +62,6 @@ Bundle 'wincent/Command-T'
 
 "ctags
 Bundle 'majutsushi/tagbar'
-Bundle 'vim-scripts/AutoComplPop'
 Bundle 'vim-scripts/AutoTag'
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 nmap tb :TagbarToggle<CR><C-w>l
@@ -102,42 +121,11 @@ let g:syntastic_check_on_open=1
 
 filetype plugin indent on
 
-"end Bundler stuff
-
-set ts=2 sw=2 noet
-
-map ; :
-noremap ;; ;
-
-imap <C-a> <esc>
-
-
-"Wrapping Words
-" handier esc
- inoremap kj <esc>
-" " must use handier esc
-" inoremap <esc> <nop>
-set wrap
-set lbr
-
-let mapleader = " "
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " edit vimrc in a vertical split
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 "" open new v split and switch to it
 nnoremap <leader>w <C-w>v<C-w>l
 "open new h split and switch to it
 nnoremap <leader>s <C-w>s<C-w>l
-
-"" open new tab and switch to it
-"nnoremap <leader>t :tabe <return>
-
-set encoding=utf-8
-
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-
 
