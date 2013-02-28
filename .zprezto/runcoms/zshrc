@@ -1,0 +1,87 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+#Hack to stop Zshell from renaming tmux
+DISABLE_AUTO_TITLE=true
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+# Customize to your needs...
+
+alias apt='sudo aptitude install'
+
+#alias tmax='~/bin/tmax'
+
+alias yummy='sudo yum install'
+
+alias up='sudo aptitude update && sudo aptitude safe-upgrade'
+alias search='sudo apt-cache search'
+alias la='ls -a'
+alias ..='cd ..'
+alias code='cd ~/Code/'
+
+#get to the dreamhost SSH!
+
+alias dream='ssh alxjrvs@lions.dreamhost.com'
+
+#Go talk to 8t88
+
+alias 88='cd /media/8t88'
+
+#Enable Writing mode
+
+alias lf='cd ~/Writing/lf'
+alias sp='cd ~/Writing/spndxls'
+alias write='cd ~/Writing/'
+
+#Git Alias
+
+alias git='hub'
+alias gpom='git push origin master'
+alias gs='git status'
+alias gpum='git pull origin master'
+alias gphm='git push heroku master'
+alias hreload='heroku pg:reset DATABASE && heroku run rake db:migrate'
+alias hr='heroku run'
+
+#KILL ALL SWP FILES
+
+alias swpk='rm .*.*.swp'
+
+alias gemgone='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
+
+alias reload='rake db:drop && rake db:migrate && rake db:seed'
+alias ruhrack='rackup -p9292'
+alias reload='rake db:drop && rake db:migrate && rake db:seed'
+#alias ctags="`brew --prefix`/bin/ctags"
+
+alias tks="tmux kill-server"
+alias tas="tmux attach-session -t"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias internet='lsof -inP | cut -f 1 -d " " | uniq'
+alias restart='sudo shutdown -r NOW'
+alias rotl='heroku run ruby add_tweet.rb'
+
+#pgstarting
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
+
+# Expansions
+alias ls='ls -AFGp'
+alias tree='tree -aCFl --charset=UTF8 --du --si'
+# Tmux Fuckery
+alias tmux="tmux -2"
+
+export TERM=screen-256color
+export EDITOR='vi'
