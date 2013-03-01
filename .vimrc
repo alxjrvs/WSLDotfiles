@@ -1,6 +1,6 @@
+set nocompatible "don't need to keep compatibility with Vi
 syn on
 set t_Co=256
-set nocompatible "don't need to keep compatibility with Vi
 set ruler
 set wrap
 set hidden      "improve history and buffer
@@ -43,28 +43,22 @@ Bundle 'gmarik/vundle'
 
 "Nerd{foo} Stuff
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-function OpenNERDTree()
-  execute ":NERDTree"
-endfunction
-command -nargs=0 OpenNERDTree :call OpenNERDTree()
-
-nmap <Leader>n :OpenNERDTree<CR>
 
 "programming
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'Townk/vim-autoclose'
+Bundle 'vim-ruby/vim-ruby'
 
-"commandT
-
-Bundle 'wincent/Command-T'
+"CtrlP
+Bundle "kien/ctrlp.vim"
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 "ctags
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/AutoTag'
-nnoremap <silent> <Leader>b :TagbarToggle<CR>
-nmap tb :TagbarToggle<CR><C-w>l
+nnoremap <silent> <Leader>b :TagbarToggle<CR><C-w>l
 
 
 "indent-guides
@@ -91,22 +85,22 @@ autocmd WinLeave * setlocal nocursorline
 
 "vimux
 Bundle 'benmills/vimux'
-
+"Vimux Commands
 " Prompt for a command to run
-map rp :PromptVimTmuxCommand
-
+map rp :PromptVimTmuxCommand<cr>
 " Run last command executed by RunVimTmuxCommand
-" k
-map rl :RunLastVimTmuxCommand
-
+map rl :RunLastVimTmuxCommand<cr>
 " Inspect runner pane
-map ri :InspectVimTmuxRunner
-
+map ri :InspectVimTmuxRunner<cr>
 " Close all other tmux panes in current window
-map rx :CloseVimTmuxPanes
-
+map rx :CloseVimTmuxPanes<cr>
 " Interrupt any command running in the runner pane
-map rs :InterruptVimTmuxRunnerk
+map rs :InterruptVimTmuxRunner<cr>
+
+"vroom
+Bundle 'skalnik/vim-vroom'
+let g:vroom_use_vimux=1
+let g:vroom_use_bundle_exec=1
 
 "snippets
 Bundle 'garbas/vim-snipmate'
@@ -128,4 +122,5 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 "open new h split and switch to it
 nnoremap <leader>s <C-w>s<C-w>l
-
+" shortcut to source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
