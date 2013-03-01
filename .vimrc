@@ -13,7 +13,6 @@ set tabstop=2
 set expandtab
 set wrap
 set lbr
-set hlsearch
 set encoding=utf-8
 set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set list
