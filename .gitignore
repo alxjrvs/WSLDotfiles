@@ -16,3 +16,7 @@
 
 #Tmux
 !.tmux.conf
+
+#Tmuxinator
+!.tmuxinator/
+!.tmuxinator/*
