@@ -3,18 +3,12 @@
 
 project_name: WednesdayShelf
 project_root: ~/Code/WednesdayShelf
-rvm: 1.9.3
 pre: rm .zeus.sock
 tabs:
-  - server:
+  - server: foreman start
   - editor: vim .
   - console:
   - tests:
-      layout: main-vertical
-      panes:
-        -
-        - #empty, will just run plain bash
-        - top
   - database:
   - git: git pull
   - zeus: zeus start

@@ -59,6 +59,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/AutoTag'
 nnoremap <silent> <Leader>b :TagbarToggle<CR><C-w>l
+nnoremap <silent> tb :TagbarToggle<CR><C-w>l
 
 
 "indent-guides
