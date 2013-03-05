@@ -16,14 +16,9 @@ DISABLE_AUTO_TITLE=true
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-# Customize to your needs...
 
 alias apt='sudo aptitude install'
-
-#alias tmax='~/bin/tmax'
-
 alias yummy='sudo yum install'
-
 alias up='sudo aptitude update && sudo aptitude safe-upgrade'
 alias search='sudo apt-cache search'
 alias la='ls -a'
@@ -38,12 +33,6 @@ alias dream='ssh alxjrvs@lions.dreamhost.com'
 
 alias 88='cd /media/8t88'
 
-#Enable Writing mode
-
-alias lf='cd ~/Writing/lf'
-alias sp='cd ~/Writing/spndxls'
-alias write='cd ~/Writing/'
-
 #Git Alias
 
 alias git='hub'
@@ -55,7 +44,6 @@ alias hreload='heroku pg:reset DATABASE && heroku run rake db:migrate'
 alias hr='heroku run'
 
 #KILL ALL SWP FILES
-
 alias swpk='rm .*.*.swp'
 
 alias gemgone='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
@@ -64,7 +52,6 @@ alias reload='rake db:drop && rake db:create && rake db:migrate && rake db:seed'
 alias ruhrack='rackup -p9292'
 alias reload='rake db:drop && rake db:migrate && rake db:seed'
 #
-#alias ctags="`brew --prefix`/bin/ctags"
 
 alias tks="tmux kill-server"
 alias tas="tmux attach-session -t"
@@ -73,6 +60,9 @@ alias ...='cd ../..'
 alias internet='lsof -inP | cut -f 1 -d " " | uniq'
 alias restart='sudo shutdown -r NOW'
 alias rotl='heroku run ruby add_tweet.rb'
+
+#rsync shortcut
+alias rsync="rsync -rzhP"
 
 #pgstarting
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
