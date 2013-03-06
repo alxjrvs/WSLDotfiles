@@ -110,6 +110,9 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'honza/snipmate-snippets'
 let g:snippets_dir = '~/.vim/bundle/vim-snipmate/syntax/'
 
+"GitGutter
+Bundle 'airblade/vim-gitgutter'
+
 "Syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
