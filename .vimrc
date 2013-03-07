@@ -16,6 +16,7 @@ set lbr
 set encoding=utf-8
 set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set list
+set complete=.,b,u,]
 
 map <up> <nop>
 map <down> <nop>
@@ -49,6 +50,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-ruby/vim-ruby'
+
+"SuperTab
+Bundle 'ervandew/supertab'
 
 "CtrlP
 Bundle "kien/ctrlp.vim"
