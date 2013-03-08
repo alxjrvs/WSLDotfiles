@@ -4,7 +4,7 @@
 *~
 #Rails Dev
 config/database.yml
-
+.rspec
 # Compiled source #
 ###################
 *.com
