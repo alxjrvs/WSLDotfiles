@@ -120,6 +120,7 @@ Bundle 'airblade/vim-gitgutter'
 "Syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
+
 " Coffee Script stuff
 Bundle 'kchmck/vim-coffee-script'
 

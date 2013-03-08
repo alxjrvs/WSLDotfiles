@@ -75,5 +75,10 @@ alias tree='tree -aCFl --charset=UTF8 --du --si'
 # Tmux Fuckery
 alias tmux="tmux -2"
 
+#Bundle
+alias vinstall="vim +BundleInstall +qall"
+alias vclean="vim +BundleClean +qall"
+alias vupdate="vim +BundleUpdate +qall"
+
 export TERM=screen-256color
 export EDITOR='vi'
