@@ -50,6 +50,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'sunaku/vim-ruby-minitest'
 
 "SuperTab
 Bundle 'ervandew/supertab'

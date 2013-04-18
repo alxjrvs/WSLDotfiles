@@ -82,3 +82,7 @@ alias vupdate="vim +BundleUpdate +qall"
 
 export TERM=screen-256color
 export EDITOR='vi'
+
+#ChuppAliases
+alias git co="git checkout"
+alias v="vim"

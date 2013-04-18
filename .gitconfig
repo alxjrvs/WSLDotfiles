@@ -5,3 +5,5 @@
 	excludesfile = /Users/alxjrvs/.gitignore_global
 [push]
 	default = simple
+[rerere]
+	enabled = true
