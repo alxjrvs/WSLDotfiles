@@ -113,7 +113,6 @@ let g:vroom_use_bundle_exec=1
 "snippets
 Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'honza/snipmate-snippets'
 let g:snippets_dir = '~/.vim/bundle/vim-snipmate/syntax/'
 
