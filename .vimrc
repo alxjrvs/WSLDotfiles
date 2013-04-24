@@ -41,6 +41,8 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+"Startify
+Bundle 'mhinz/vim-startify'
 
 "Nerd{foo} Stuff
 Bundle 'scrooloose/nerdcommenter'
