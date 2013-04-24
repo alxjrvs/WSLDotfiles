@@ -114,6 +114,7 @@ let g:vroom_use_bundle_exec=1
 Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
 Bundle 'honza/snipmate-snippets'
+Bundle 'MarcWeber/vim-addon-mw-utils'
 let g:snippets_dir = '~/.vim/bundle/vim-snipmate/syntax/'
 
 "GitGutter
@@ -126,6 +127,16 @@ let g:syntastic_check_on_open=1
 " Coffee Script stuff
 Bundle 'kchmck/vim-coffee-script'
 
+"Supertab
+Bundle 'ervandew/supertab'
+
+"ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"improve autocomplete menu color
+highlight Pmenu ctermbg=238 gui=bold
 
 filetype plugin indent on
 
