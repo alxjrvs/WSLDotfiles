@@ -60,7 +60,8 @@ Bundle 'ervandew/supertab'
 "CtrlP
 Bundle "kien/ctrlp.vim"
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 "ctags
 Bundle 'majutsushi/tagbar'
