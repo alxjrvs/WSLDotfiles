@@ -40,7 +40,6 @@ alias gp='git push'
 alias gs='git status'
 alias gpr='git pull --rebase'
 alias gphm='git push heroku master'
-alias hreload='heroku pg:reset DATABASE && heroku run rake db:migrate'
 alias hr='heroku run'
 alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
 
@@ -49,17 +48,15 @@ alias swpk='rm .*.*.swp'
 
 alias gemgone='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
 
-alias reload='rake db:drop && rake db:create && rake db:migrate && rake db:seed'
-alias ruhrack='rackup -p9292'
-alias reload='rake db:drop && rake db:migrate && rake db:seed'
 alias z='zeus'
 #
 
-alias tks="tmux kill-server"
+alias be="bundle exec"
+
+alias tks="tmux kill-session -t"
 alias tas="tmux attach-session -t"
+alias tls="tmux list-sessions"
 alias ..='cd ..'
-alias ...='cd ../..'
-alias internet='lsof -inP | cut -f 1 -d " " | uniq'
 
 #rsync shortcut
 alias rsync="rsync -rzhP"

@@ -38,11 +38,7 @@ call vundle#rc()
 
 "Let Vundle manage Vundle
 "required!
-
 Bundle 'gmarik/vundle'
-
-"Startify
-Bundle 'mhinz/vim-startify'
 
 "Nerd{foo} Stuff
 Bundle 'scrooloose/nerdcommenter'
@@ -78,6 +74,9 @@ let g:indent_guides_start_level=2
 let g:indent_guides_auto_colors=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+
+"Surround Vim
+Bundle 'tpope/vim-surround.git'
 
 "Powerline
 Bundle 'Lokaltog/vim-powerline'
