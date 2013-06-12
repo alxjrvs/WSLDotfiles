@@ -1,13 +1,10 @@
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+#for zsh completions
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Customize to your needs...
 #Hack to stop Zshell from renaming tmux
@@ -25,15 +22,15 @@ alias ..='cd ..'
 alias code='cd ~/Code/'
 
 #get to the dreamhost SSH!
-
 alias dream='ssh alxjrvs@lions.dreamhost.com'
 
 #Go talk to 8t88
-
 alias 88='cd /media/8t88'
 
-#Git Alias
+#plugins
+plugins=(git)
 
+#Git Alias
 alias git='hub'
 alias ga='git add'
 alias gp='git push'
@@ -52,6 +49,7 @@ alias z='zeus'
 #
 
 alias be="bundle exec"
+alias bake="bundle exec rake"
 
 alias tks="tmux kill-session -t"
 alias tas="tmux attach-session -t"
@@ -82,4 +80,13 @@ export EDITOR='vi'
 
 #ChuppAliases
 alias gc="git checkout"
+alias gcb="git checkout -b"
+alias gcm="git commit -m"
 alias v="vim"
+
+#Ruby Performance Tweaks
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_HEAP_FREE_MIN=500000
