@@ -39,6 +39,7 @@ alias gpr='git pull --rebase'
 alias gphm='git push heroku master'
 alias hr='heroku run'
 alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
+alias gpu='git push -u origin'
 
 #KILL ALL SWP FILES
 alias swpk='rm .*.*.swp'
@@ -50,6 +51,7 @@ alias z='zeus'
 
 alias be="bundle exec"
 alias bake="bundle exec rake"
+alias migrate="bundle exec rake db:migrate db:test:prepare"
 
 alias tks="tmux kill-session -t"
 alias tas="tmux attach-session -t"
