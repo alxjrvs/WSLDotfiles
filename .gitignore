@@ -20,3 +20,5 @@
 #Tmuxinator
 !.tmuxinator/
 !.tmuxinator/*
+
+*.dump

@@ -32,6 +32,7 @@ plugins=(git)
 
 #Git Alias
 alias git='hub'
+alias gx='gitx'
 alias ga='git add'
 alias gp='git push'
 alias gs='git status'
@@ -85,6 +86,9 @@ alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gcm="git commit -m"
 alias v="vim"
+
+#iOS simulator
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 #heroku
 alias db_restore='pg_restore --verbose --clean --no-acl --no-owner'

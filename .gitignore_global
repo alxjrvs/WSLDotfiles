@@ -44,3 +44,5 @@ tags
 Icon?
 ehthumbs.db
 Thumbs.db
+
+*.dump
