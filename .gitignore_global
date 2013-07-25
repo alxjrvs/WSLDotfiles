@@ -5,6 +5,7 @@
 #Rails Dev
 config/database.yml
 .rspec
+.ruby-version
 # Compiled source #
 ###################
 *.com
