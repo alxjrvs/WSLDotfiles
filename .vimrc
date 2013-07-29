@@ -93,6 +93,9 @@ set cursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+"Holy Light - MAC ONLY
+Bundle 'Dinduks/vim-holylight'
+
 "vimux
 Bundle 'benmills/vimux'
 "Vimux Commands
@@ -115,7 +118,7 @@ let g:vroom_use_bundle_exec=1
 "snippets
 Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
-Bundle 'honza/snipmate-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 let g:snippets_dir = '~/.vim/bundle/vim-snipmate/syntax/'
 
