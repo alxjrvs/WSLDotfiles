@@ -84,9 +84,11 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
 "Colorscheme
-Bundle 'wgibbs/vim-irblack'
-Bundle 'kml/vim-irblack-plus'
-colorscheme ir_black+
+Bundle 'Lokaltog/vim-distinguished'
+Bundle 'altercation/vim-colors-solarized'
+syntax enable
+set background=dark
+colorscheme solarized
 set cursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
@@ -135,6 +137,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
