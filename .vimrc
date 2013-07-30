@@ -27,9 +27,9 @@ noremap ;; ;
 inoremap kj <esc>
 imap <C-a> <esc>
 
-
 let mapleader = " "
 
+syntax on
 filetype off
 
 "vundle
@@ -84,17 +84,12 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
 "Colorscheme
-Bundle 'Lokaltog/vim-distinguished'
 Bundle 'altercation/vim-colors-solarized'
-syntax enable
 set background=dark
 colorscheme solarized
 set cursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-
-"Holy Light - MAC ONLY
-Bundle 'Dinduks/vim-holylight'
 
 "vimux
 Bundle 'benmills/vimux'
@@ -115,6 +110,9 @@ Bundle 'skalnik/vim-vroom'
 let g:vroom_use_vimux=1
 let g:vroom_use_bundle_exec=1
 
+"CoffeeScript
+Bundle 'kchmck/vim-coffee-script'
+
 "snippets
 Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
@@ -129,9 +127,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 
-" Coffee Script stuff
-Bundle 'kchmck/vim-coffee-script'
-
 "Supertab
 Bundle 'ervandew/supertab'
 
@@ -144,8 +139,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
-filetype plugin indent on
-
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " edit vimrc in a vertical split
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
@@ -155,3 +148,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>s <C-w>s<C-w>l
 " shortcut to source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+filetype on
+filetype indent on
+filetype plugin on
