@@ -91,19 +91,26 @@ set cursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+"Headlights
+Bundle 'mbadran/headlights'
+
 "vimux
 Bundle 'benmills/vimux'
 "Vimux Commands
 " Prompt for a command to run
-map rp :PromptVimTmuxCommand<cr>
+map rp :VimuxPromptCommand<cr>
 " Run last command executed by RunVimTmuxCommand
-map rl :RunLastVimTmuxCommand<cr>
+map rl :VimuxRunLastCommand<cr>
 " Inspect runner pane
-map ri :InspectVimTmuxRunner<cr>
+map ri :VimuxInspectRunner<cr>
 " Close all other tmux panes in current window
-map rx :CloseVimTmuxPanes<cr>
-" Interrupt any command running in the runner pane
-map rs :InterruptVimTmuxRunner<cr>
+map rx :VimuxCloseRunner<cr>
+
+"turbux
+Bundle 'jgdavey/vim-turbux'
+let g:no_turbux_mappings = 1
+map <leader>m <Plug>SendTestToTmux
+map <leader>M <Plug>SendFocusedTestToTmux
 
 "vroom
 Bundle 'skalnik/vim-vroom'
