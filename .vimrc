@@ -13,6 +13,7 @@ set tabstop=2
 set expandtab
 set wrap
 set lbr
+set linespace=0
 set encoding=utf-8
 set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set list
@@ -42,6 +43,19 @@ Bundle 'gmarik/vundle'
 
 "Nerd{foo} Stuff
 Bundle 'scrooloose/nerdcommenter'
+
+"Airline
+Bundle 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+set laststatus=2
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = '⮃'
+let g:airline_fugitive_prefix = '⭠'
+let g:airline_readonly_symbol = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
 
 "programming
 Bundle 'tpope/vim-fugitive'
@@ -78,9 +92,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 "Surround Vim
 Bundle 'tpope/vim-surround.git'
 
-"Airline
-Bundle 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
 
 "Colorscheme
 Bundle 'altercation/vim-colors-solarized'
