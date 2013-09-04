@@ -78,10 +78,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 "Surround Vim
 Bundle 'tpope/vim-surround.git'
 
-"Powerline
-Bundle 'Lokaltog/vim-powerline'
-set laststatus=2
-let g:Powerline_symbols = 'fancy'
+"Airline
+Bundle 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
 
 "Colorscheme
 Bundle 'altercation/vim-colors-solarized'
@@ -109,13 +108,14 @@ map rx :VimuxCloseRunner<cr>
 "turbux
 Bundle 'jgdavey/vim-turbux'
 let g:no_turbux_mappings = 1
-map <leader>m <Plug>SendTestToTmux
-map <leader>M <Plug>SendFocusedTestToTmux
+let g:turbux_command_prefix = 'bundle exec'
+map <leader>r <Plug>SendTestToTmux
+map <leader>R <Plug>SendFocusedTestToTmux
 
-"vroom
-Bundle 'skalnik/vim-vroom'
-let g:vroom_use_vimux=1
-let g:vroom_use_bundle_exec=1
+""vroom
+"Bundle 'skalnik/vim-vroom'
+"let g:vroom_use_vimux=1
+"let g:vroom_use_bundle_exec=1
 
 "CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
@@ -136,6 +136,10 @@ let g:syntastic_check_on_open=1
 
 "Supertab
 Bundle 'ervandew/supertab'
+
+Bundle 'rking/ag.vim'
+
+Bundle 'tpope/vim-unimpaired'
 
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
