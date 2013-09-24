@@ -44,6 +44,9 @@ Bundle 'gmarik/vundle'
 "Nerd{foo} Stuff
 Bundle 'scrooloose/nerdcommenter'
 
+"Handlebars
+Bundle 'juvenn/mustache.vim'
+
 "Airline
 Bundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
@@ -141,6 +144,7 @@ let g:snippets_dir = '~/.vim/bundle/vim-snipmate/syntax/'
 "GitGutter
 Bundle 'airblade/vim-gitgutter'
 
+Bundle 'tpope/vim-haml'
 "Syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
