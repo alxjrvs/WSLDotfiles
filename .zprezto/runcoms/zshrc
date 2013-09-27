@@ -87,6 +87,9 @@ alias gcb="git checkout -b"
 alias gcm="git commit -m"
 alias v="vim"
 
+kill_port() {
+   lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill | echo "Killed servers on port $*"
+}
 #iOS simulator
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
