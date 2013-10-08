@@ -90,6 +90,12 @@ alias v="vim"
 kill_port() {
    lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill | echo "Killed servers on port $*"
 }
+
+genesis(){
+  rails new $* --skip-test-unit -m https://raw.github.com/alxjrvs/kickoff/master/template.rb
+}
+
+
 #iOS simulator
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
