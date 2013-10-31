@@ -21,4 +21,7 @@
 !.tmuxinator/
 !.tmuxinator/*
 
+#tips sheet
+!.tip_sheet
+
 *.dump

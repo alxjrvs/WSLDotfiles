@@ -102,6 +102,9 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhon
 #heroku
 alias db_restore='pg_restore --verbose --clean --no-acl --no-owner'
 
+#tips
+alias tips='vim ~/.tip_sheet'
+
 #Ruby Performance Tweaks
 export RUBY_HEAP_MIN_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
