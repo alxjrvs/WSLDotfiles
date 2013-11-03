@@ -174,6 +174,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>s <C-w>s<C-w>l
 " shortcut to source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap :w <Esc>:w<return>
 
 filetype on
 filetype indent on
