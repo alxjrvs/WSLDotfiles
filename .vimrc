@@ -142,7 +142,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 let g:snippets_dir = '~/.vim/bundle/vim-snipmate/syntax/'
 
 "GitGutter
-Bundle 'airblade/vim-gitgutter'
+"Bundle 'airblade/vim-gitgutter'
 
 Bundle 'tpope/vim-haml'
 "Syntastic
