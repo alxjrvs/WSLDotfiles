@@ -109,6 +109,8 @@ Bundle 'mbadran/headlights'
 
 "vimux
 Bundle 'benmills/vimux'
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "25"
 "Vimux Commands
 " Prompt for a command to run
 map rp :VimuxPromptCommand<cr>
@@ -121,6 +123,7 @@ map rx :VimuxCloseRunner<cr>
 
 "turbux
 Bundle 'jgdavey/vim-turbux'
+let g:VimuxOrientation = "h"
 let g:no_turbux_mappings = 1
 let g:turbux_command_prefix = 'bundle exec'
 map <leader>r <Plug>SendTestToTmux

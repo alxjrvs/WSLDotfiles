@@ -6,8 +6,8 @@ fi
 #for zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# Customize to your needs...
-#Hack to stop Zshell from renaming tmux
+## Customize to your needs...
+##Hack to stop Zshell from renaming tmux
 DISABLE_AUTO_TITLE=true
 
 ### Added by the Heroku Toolbelt
@@ -27,11 +27,10 @@ alias dream='ssh alxjrvs@lions.dreamhost.com'
 #Go talk to 8t88
 alias 88='cd /media/8t88'
 
-#plugins
-plugins=(git)
+#smart alias for 'hub'
+eval "$(hub alias -s)"
 
 #Git Alias
-alias git='hub'
 alias gx='gitx'
 alias ga='git add'
 alias gp='git push'
@@ -41,6 +40,7 @@ alias gphm='git push heroku master'
 alias hr='heroku run'
 alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
 alias gpu='git push -u origin'
+
 
 #KILL ALL SWP FILES
 alias swpk='rm .*.*.swp'
@@ -87,6 +87,9 @@ alias gcb="git checkout -b"
 alias gcm="git commit -m"
 alias v="vim"
 
+
+#YSEE
+alias theo="foreman run rails s -p"
 kill_port() {
    lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill | echo "Killed servers on port $*"
 }
@@ -112,3 +115,5 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 export SSL_CERT_FILE=/usr/local/etc/cacert.pem
+
+eval "$(rbenv init -)"
