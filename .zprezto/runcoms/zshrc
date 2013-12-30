@@ -40,7 +40,9 @@ alias gphm='git push heroku master'
 alias hr='heroku run'
 alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
 alias gpu='git push -u origin'
-
+alias pr='hub pull-request'
+alias git_local_clean='git branch --merged | grep -v \"\*\" | xargs -n 1 git branch -d'
+alias fr='foreman run'
 
 #KILL ALL SWP FILES
 alias swpk='rm .*.*.swp'
