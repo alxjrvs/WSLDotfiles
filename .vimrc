@@ -23,8 +23,6 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-map ; :
-noremap ;; ;
 inoremap kj <esc>
 imap <C-a> <esc>
 
@@ -95,7 +93,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 "Surround Vim
 Bundle 'tpope/vim-surround.git'
 
-
 "Colorscheme
 Bundle 'altercation/vim-colors-solarized'
 set background=dark
@@ -123,6 +120,7 @@ map rx :VimuxCloseRunner<cr>
 
 "turbux
 Bundle 'jgdavey/vim-turbux'
+let g:VimuxOrientation = "h"
 let g:VimuxOrientation = "h"
 let g:no_turbux_mappings = 1
 let g:turbux_command_prefix = 'bundle exec'
