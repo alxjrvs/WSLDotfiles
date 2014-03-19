@@ -14,6 +14,7 @@ set expandtab
 set wrap
 set lbr
 set linespace=0
+set re=1 "use old regex engine, better for ruby
 set encoding=utf-8
 set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set list
@@ -49,7 +50,7 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 set laststatus=2
-
+set fillchars=diff:·
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = '⮁'
 let g:airline_right_sep = ''
@@ -135,16 +136,10 @@ map <leader>R <Plug>SendFocusedTestToTmux
 "CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
 
-"snippets
-Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
-Bundle 'honza/vim-snippets'
 Bundle 'MarcWeber/vim-addon-mw-utils'
-let g:snippets_dir = '~/.vim/bundle/vim-snipmate/syntax/'
-
-"GitGutter
-
 Bundle 'tpope/vim-haml'
+
 "Syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
@@ -156,6 +151,8 @@ Bundle 'rking/ag.vim'
 
 Bundle 'tpope/vim-unimpaired'
 
+Bundle 'wellle/tmux-complete.vim'
+
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
@@ -165,7 +162,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " edit vimrc in a vertical split
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 "" open new v split and switch to it
