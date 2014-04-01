@@ -14,7 +14,7 @@ set expandtab
 set wrap
 set lbr
 set linespace=0
-set re=1 "use old regex engine, better for ruby
+"set re=1 "use old regex engine, better for ruby
 set encoding=utf-8
 set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set list
@@ -121,8 +121,7 @@ map rx :VimuxCloseRunner<cr>
 
 "turbux
 Bundle 'jgdavey/vim-turbux'
-let g:VimuxOrientation = "h"
-let g:VimuxOrientation = "h"
+let g:VimuxOrientation = "v"
 let g:no_turbux_mappings = 1
 let g:turbux_command_prefix = 'bundle exec'
 map <leader>r <Plug>SendTestToTmux
