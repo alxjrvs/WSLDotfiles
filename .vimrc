@@ -1,5 +1,23 @@
-set nocompatible "don't need to keep compatibility with Vi
+"""""""""""""""""""""""""""""""""
+""""  ALXJRVS Shell Profile  """"
+""""      Version 2.0.0      """"
+""""        "Metron"         """"
+"""""""""""""""""""""""""""""""""
+
+"""" CHANGELOG
+  "" 4.20.2014 2.0.0 There Came a Time When The Old Gods Died.
+
+"""" Contents """"
+  "" .I. Setup
+  "" .II. Generic Mappings
+  "" .III. Vundle
+
+"""" .I. Setup """"
+
+filetype off
 syn on
+
+set nocompatible
 set t_Co=256
 set ruler
 set wrap
@@ -14,39 +32,59 @@ set expandtab
 set wrap
 set lbr
 set linespace=0
-"set re=1 "use old regex engine, better for ruby
 set encoding=utf-8
 set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set list
 set complete=.,b,u,]
 
+"" Ruby Setups
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
+"" Improve autocomplete menu color
+highlight Pmenu ctermbg=238 gui=bold
+
+"""" .II. Generic Mappings """"
+
+"" Disable Arrow Keys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-inoremap kj <esc>
-imap <C-a> <esc>
 
+"" Make Space bar leader, because I am a monster?
 let mapleader = " "
 
-syntax on
-filetype off
+"" Edit vimrc in a vertical split
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
-"vundle
+"" Open new v split and switch to it
+nnoremap <leader>w <C-w>v<C-w>l
+
+"" Open new h split and switch to it
+nnoremap <leader>s <C-w>s<C-w>l
+
+"" Shortcut to source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"""" .III. Vundle """"
+
+"" Let Vundle manage Vundle
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-"Let Vundle manage Vundle
-"required!
+"" Vundle
 Bundle 'gmarik/vundle'
 
-"Nerd{foo} Stuff
+"" Nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
 
-"Handlebars
+"" Handlebars
 Bundle 'juvenn/mustache.vim'
 
-"Airline
+"" Airline
 Bundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 set laststatus=2
@@ -59,30 +97,30 @@ let g:airline_fugitive_prefix = '⭠'
 let g:airline_readonly_symbol = '⭤'
 let g:airline_linecolumn_prefix = '⭡'
 
-"programming
+"" Programming
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
 
-"SuperTab
+"" SuperTab
 Bundle 'ervandew/supertab'
 
-"CtrlP
+"" CtrlP
 Bundle "kien/ctrlp.vim"
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-"ctags
+"" Ctags
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/AutoTag'
 nnoremap <silent> <Leader>b :TagbarToggle<CR><C-w>l
 nnoremap <silent> tb :TagbarToggle<CR><C-w>l
 
 
-"indent-guides
+"" Indent-guides
 Bundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
@@ -91,10 +129,10 @@ let g:indent_guides_auto_colors=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 
-"Surround Vim
+"" Surround Vim
 Bundle 'tpope/vim-surround.git'
 
-"Colorscheme
+"" Colorscheme
 Bundle 'altercation/vim-colors-solarized'
 set background=dark
 colorscheme solarized
@@ -102,24 +140,24 @@ set cursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
-"Headlights
+"" Headlights
 Bundle 'mbadran/headlights'
 
-"vimux
+"" Vimux
 Bundle 'benmills/vimux'
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "25"
-"Vimux Commands
-" Prompt for a command to run
+
+"" Prompt for a command to run
 map rp :VimuxPromptCommand<cr>
-" Run last command executed by RunVimTmuxCommand
+"" Run last command executed by RunVimTmuxCommand
 map rl :VimuxRunLastCommand<cr>
-" Inspect runner pane
+"" Inspect runner pane
 map ri :VimuxInspectRunner<cr>
-" Close all other tmux panes in current window
+"" Close all other tmux panes in current window
 map rx :VimuxCloseRunner<cr>
 
-"turbux
+"" Turbux
 Bundle 'jgdavey/vim-turbux'
 let g:VimuxOrientation = "v"
 let g:no_turbux_mappings = 1
@@ -127,49 +165,35 @@ let g:turbux_command_prefix = 'foreman run bundle exec'
 map <leader>r <Plug>SendTestToTmux
 map <leader>R <Plug>SendFocusedTestToTmux
 
-""vroom
-"Bundle 'skalnik/vim-vroom'
-"let g:vroom_use_vimux=1
-"let g:vroom_use_bundle_exec=1
-
-"CoffeeScript
+"" CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
 
+"" Tlib vim
 Bundle 'tomtom/tlib_vim'
+
+"" Vim Addon MW Utils
 Bundle 'MarcWeber/vim-addon-mw-utils'
+
+"" VimHaml
 Bundle 'tpope/vim-haml'
 
-"Syntastic
+"" Syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 
-"Supertab
+"" Supertab
 Bundle 'ervandew/supertab'
 
+"" Silver Searcher
 Bundle 'rking/ag.vim'
 
+"" Vim Unimpared
 Bundle 'tpope/vim-unimpaired'
 
+"" Tmux Compelete
 Bundle 'wellle/tmux-complete.vim'
 
-"ruby
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-"
-"improve autocomplete menu color
-highlight Pmenu ctermbg=238 gui=bold
-
-" edit vimrc in a vertical split
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-"" open new v split and switch to it
-nnoremap <leader>w <C-w>v<C-w>l
-"open new h split and switch to it
-nnoremap <leader>s <C-w>s<C-w>l
-" shortcut to source vimrc
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
+"" Hacky End-Of-File stuff
 filetype on
 filetype indent on
 filetype plugin on
