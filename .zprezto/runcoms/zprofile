@@ -1,9 +1,0 @@
-#
-# Executes commands at login pre-zshrc.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-export EDITOR='vi'
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator ]]

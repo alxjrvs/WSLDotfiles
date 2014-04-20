@@ -1,27 +1,36 @@
-#Ignore everything by default
+#####################################
+####  ALXJRVS Git Configuration  ####
+####       Version 2.0.0         ####
+####        "Gilotina"           ####
+#####################################
+
+#### CHANGELOG
+  ## 4.20.2014 2.0.0 There Came a Time When The Old Gods Died.
+
+## Ignore everything by default
 *
 
-#Vim configs
+## Vim configs
 !.vimrc
 
-#Git configs
+## Git configs
 !.gitignore_global
 !.gitconfig
 !.gitignore
 
-#Zshrc configs
+## Zshrc configs
 !.zprezto/
 !.zprezto/runcoms/
 !.zprezto/runcoms/*
 
-#Tmux
+## Tmux
 !.tmux.conf
 
-#Tmuxinator
+## Tmuxinator
 !.tmuxinator/
 !.tmuxinator/*
 
-#tips sheet
+## Tips sheet
 !.tip_sheet
-
 *.dump
+

@@ -1,121 +1,123 @@
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+#################################
+####  ALXJRVS Shell Profile  ####
+####      Version 2.0.0      ####
+####        "Metron"         ####
+#################################
 
-#for zsh completions
-fpath=(/usr/local/share/zsh-completions $fpath)
+#### CHANGELOG
+  ## 4.20.2014 2.0.0 There Came a Time When The Old Gods Died.
 
-## Customize to your needs...
-##Hack to stop Zshell from renaming tmux
-DISABLE_AUTO_TITLE=true
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-alias apt='sudo aptitude install'
-alias yummy='sudo yum install'
-alias up='sudo aptitude update && sudo aptitude safe-upgrade'
-alias search='sudo apt-cache search'
-alias la='ls -a'
-alias ..='cd ..'
-alias code='cd ~/Code/'
-
-#get to the dreamhost SSH!
-alias dream='ssh alxjrvs@lions.dreamhost.com'
-
-#Go talk to 8t88
-alias 88='cd /media/8t88'
-
-#smart alias for 'hub'
-eval "$(hub alias -s)"
-
-#Git Alias
-alias gx='gitx'
-alias ga='git add'
-alias gp='git push'
-alias gs='git status'
-alias gpr='git pull --rebase'
-alias gphm='git push heroku master'
-alias hr='heroku run'
-alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
-alias gpu='git push -u origin'
-alias pr='hub pull-request'
-alias git_local_clean='git branch --merged | grep -v \"\*\" | xargs -n 1 git branch -d'
-alias fr='foreman run'
-
-#KILL ALL SWP FILES
-alias swpk='rm .*.*.swp'
-
-alias gemgone='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
-
-alias z='zeus'
-#
-
-alias be="bundle exec"
-alias bake="bundle exec rake"
-alias migrate="bundle exec rake db:migrate db:test:prepare"
-
-alias tks="tmux kill-session -t"
-alias tas="tmux attach-session -t"
-alias tls="tmux list-sessions"
-alias ..='cd ..'
-
-#rsync shortcut
-alias rsync="rsync -rzhP"
-
-#pgstarting
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
-
-# Expansions
-alias ls='ls -AFGp'
-alias tree='tree -aCFl --charset=UTF8 --du --si'
-
-# Tmux Fuckery
-alias tmux="tmux -2"
-
-#Bundle
-alias vinstall="vim +BundleInstall +qall"
-alias vclean="vim +BundleClean +qall"
-alias vupdate="vim +BundleUpdate +qall"
-
-export TERM=screen-256color
-export EDITOR='vi'
-
-#ChuppAliases
-alias gc="git checkout"
-alias gcb="git checkout -b"
-alias gcm="git commit -m"
-alias v="vim"
+#### Contents ####
+  ## .I. Setup
+  ## .II. Aliases
+   #   .IIa. Command Line Navigation
+   #   .IIb. Git
+   #   .IIc. Vim
+   #   .IId. Tmux
+   #   .IIe. Programming (Ruby, Rails)
+   #   .IIf. Web Development
+   #   .IIg. Toolbox
+  ## .III. Environment Tweaks
 
 
-#YSEE
-alias theo="foreman run rails s -p"
-kill_port() {
-   lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill | echo "Killed servers on port $*"
-}
 
-genesis(){
-  rails new $* --skip-test-unit -m https://raw.github.com/alxjrvs/kickoff/master/template.rb
-}
+#### .I. Setup ####
+  ## Source Prezto  htps://github.com/sorin-ionescu/prezto
+    if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+      source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+    fi
+
+  ## Add local sbin to path
+    export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+  ## Enable Smart Hub Alias https://github.com/github/hub
+    eval "$(hub alias -s)"
+
+  ## Initialize Rbenv https://github.com/sstephenson/rbenv
+    eval "$(rbenv init -)"
+
+#### .II. Aliases ####
+  #### .IIa. Command Line Navigation ####
+    alias la='ls -a'
+    alias ..='cd ..'
+    alias code='cd ~/Code/'
+    alias ls='ls -AFGp'
+
+  #### .IIb. Git ####
+    alias gx='gitx'
+    alias ga='git add'
+    alias gp='git push'
+    alias gs='git status'
+    alias gpr='git pull --rebase'
+    alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
+    alias pr='hub pull-request'
+    alias gc="git checkout"
+    alias gcm="git commit -m"
+
+    gcb() {
+      (git checkout -b $*; git push -u origin $*)
+    }
+
+  #### .IIc. Vim ####
+    alias vinstall="vim +BundleInstall +qall"
+    alias vclean="vim +BundleClean +qall"
+    alias vupdate="vim +BundleUpdate +qall"
+    alias v="vim"
+
+  #### .IId. Tmux ####
+    alias tks="tmux kill-session -t"
+    alias tas="tmux attach-session -t"
+    alias tls="tmux list-sessions"
+    alias tmux="tmux -2"
+
+  #### .IIe. Programming (Ruby, Rails) ####
+    alias fr='foreman run'
+    alias be="bundle exec"
+    alias bake="foreman run bundle exec rake"
+    alias migrate="bundle exec rake db:migrate db:test:prepare"
+    alias cosb='foreman run rails'
+    alias theo="foreman run rails s -p"
+
+    genesis(){
+      rails new $* --skip-test-unit -m https://raw.github.com/alxjrvs/kickoff/master/template.rb
+    }
+
+  #### .IIf. Web Development ####
+    alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+    alias db_restore='pg_restore --verbose --clean --no-acl --no-owner'
+
+  #### .IIg. Toolbox ####
+    alias swpk='rm .*.*.swp'
+    alias rsync="rsync -rzhP"
+    alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+    alias pgstop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
+    alias tips='vim ~/.tip_sheet'
+
+    kill_port() {
+       lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill | echo "Killed servers on port $*"
+    }
+
+#### .III. Environment Tweaks ####
+  ## Heroku Toolbelt
+    export PATH="/usr/local/heroku/bin:$PATH"
+
+  ## Enable Zsh Completion
+    fpath=(/usr/local/share/zsh-completions $fpath)
+
+  ## Hack to stop Zshell from renaming tmux
+    DISABLE_AUTO_TITLE=true
 
 
-#iOS simulator
-alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+  ## Ruby Performance Tweaks
+    export RUBY_HEAP_MIN_SLOTS=1000000
+    export RUBY_HEAP_SLOTS_INCREMENT=1000000
+    export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+    export RUBY_GC_MALLOC_LIMIT=1000000000
+    export RUBY_HEAP_FREE_MIN=500000
+    export SSL_CERT_FILE=/usr/local/etc/cacert.pem
 
-#heroku
-alias db_restore='pg_restore --verbose --clean --no-acl --no-owner'
+  ## Set Colors
+    export TERM=screen-256color
 
-#tips
-alias tips='vim ~/.tip_sheet'
-
-#Ruby Performance Tweaks
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
-export SSL_CERT_FILE=/usr/local/etc/cacert.pem
-
-eval "$(rbenv init -)"
+  ## Set Editor
+    export EDITOR='vi'

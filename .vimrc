@@ -123,7 +123,7 @@ map rx :VimuxCloseRunner<cr>
 Bundle 'jgdavey/vim-turbux'
 let g:VimuxOrientation = "v"
 let g:no_turbux_mappings = 1
-let g:turbux_command_prefix = 'bundle exec'
+let g:turbux_command_prefix = 'foreman run bundle exec'
 map <leader>r <Plug>SendTestToTmux
 map <leader>R <Plug>SendFocusedTestToTmux
 
