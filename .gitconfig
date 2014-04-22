@@ -12,6 +12,7 @@
 	email = alxjrvs@gmail.com
 [core]
 	excludesfile = /Users/alxjrvs/.gitignore_global
+	editor = vim
 [push]
 	default = simple
 [rerere]
