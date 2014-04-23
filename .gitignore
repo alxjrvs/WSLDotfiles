@@ -23,12 +23,11 @@
 !.zprezto/runcoms/
 !.zprezto/runcoms/*
 
+#Rspec config
+!.rspec
+
 ## Tmux
 !.tmux.conf
-
-## Tmuxinator
-!.tmuxinator/
-!.tmuxinator/*
 
 ## Tips sheet
 !.tip_sheet
