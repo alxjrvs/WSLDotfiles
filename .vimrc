@@ -113,32 +113,13 @@ let g:ctrlp_map = '<leader>t'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-"" Ctags
-Bundle 'majutsushi/tagbar'
-Bundle 'vim-scripts/AutoTag'
-nnoremap <silent> <Leader>b :TagbarToggle<CR><C-w>l
-nnoremap <silent> tb :TagbarToggle<CR><C-w>l
-
-
-"" Indent-guides
-Bundle 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
-let g:indent_guides_start_level=2
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
-
 "" Surround Vim
 Bundle 'tpope/vim-surround.git'
 
-"" Colorscheme
+" Colorscheme
 Bundle 'altercation/vim-colors-solarized'
 set background=dark
 colorscheme solarized
-set cursorline
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
 
 "" Headlights
 Bundle 'mbadran/headlights'
