@@ -19,6 +19,7 @@
 !.gitignore
 
 ## Zshrc configs
+!.zsh/_git
 !.zprezto/
 !.zprezto/runcoms/
 !.zprezto/runcoms/*

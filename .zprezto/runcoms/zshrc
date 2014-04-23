@@ -102,7 +102,7 @@ kill_port() {
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Enable Zsh Completion
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh $fpath)
 
 ## Hack to stop Zshell from renaming tmux
 DISABLE_AUTO_TITLE=true
