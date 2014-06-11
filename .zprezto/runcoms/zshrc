@@ -27,11 +27,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-## Add local sbin to path
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-
 ## Enable Smart Hub Alias https://github.com/github/hub
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 
 ## Initialize Rbenv https://github.com/sstephenson/rbenv
 eval "$(rbenv init -)"
@@ -51,6 +48,7 @@ alias gs='git status'
 alias gpr='git pull --rebase'
 alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
 alias pr='hub pull-request'
+alias gbrowse='hub browse'
 alias gc="git checkout"
 alias gcm="git commit -m"
 
@@ -100,21 +98,25 @@ kill_port() {
 #### .III. Environment Tweaks ####
 ## Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 ## Enable Zsh Completion
-fpath=(~/.zsh $fpath)
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 ## Hack to stop Zshell from renaming tmux
 DISABLE_AUTO_TITLE=true
 
 
 ## Ruby Performance Tweaks
-#export RUBY_GC_HEAP_INIT_SLOTS=1000000
-#export RUBY_HEAP_SLOTS_INCREMENT=1000000
-#export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-#export RUBY_GC_MALLOC_LIMIT=1000000000
-#export RUBY_HEAP_FREE_MIN=500000
-#export SSL_CERT_FILE=/usr/local/etc/cacert.pem
+export RUBY_GC_HEAP_INIT_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_HEAP_FREE_MIN=500000
+
+##Set Gopath
+export GOPATH=$HOME/Code/.go
+export PATH=$PATH:$GOPATH/bin
 
 ## Set Colors
 export TERM=screen-256color

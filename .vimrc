@@ -104,9 +104,6 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
 
-"" SuperTab
-Bundle 'ervandew/supertab'
-
 "" CtrlP
 Bundle "kien/ctrlp.vim"
 let g:ctrlp_map = '<leader>t'
@@ -138,6 +135,15 @@ map ri :VimuxInspectRunner<cr>
 "" Close all other tmux panes in current window
 map rx :VimuxCloseRunner<cr>
 
+"indent-guides
+Bundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
+let g:indent_guides_start_level=2
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+
 "" Turbux
 Bundle 'jgdavey/vim-turbux'
 let g:VimuxOrientation = "v"
@@ -162,6 +168,9 @@ Bundle 'tpope/vim-haml'
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 
+"" Sensible Defaults
+Bundle 'tpope/vim-sensible'
+
 "" Supertab
 Bundle 'ervandew/supertab'
 
@@ -175,6 +184,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'wellle/tmux-complete.vim'
 
 "" Hacky End-Of-File stuff
+syntax on
+filetype off
 filetype on
-filetype indent on
-filetype plugin on
+filetype plugin indent on
