@@ -1,12 +1,12 @@
 # ~/.tmuxinator/dev.yml
-name: dev
+name: bench
 root: .
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
+#pre: pgstart
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -18,10 +18,8 @@ root: .
 # tmux_command: byobu
 
 windows:
-  - Git: gitsh
   - ws1:
   - ws2:
   - ws3:
-  - ws4: tmux rename-session -t dev `printf '%s\n' "${PWD##*/}"`; clear
-  - server: theo 3001
-
+  - ws4:
+  - ws5: tmux rename-session -t bench `printf '%s\n' "${PWD##*/}"`; clear
