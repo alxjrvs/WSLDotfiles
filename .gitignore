@@ -29,6 +29,8 @@
 
 ## Tmux
 !.tmux.conf
+!.tmuxinator/
+!.tmuxinator/*
 
 ## Tips sheet
 !.tip_sheet
