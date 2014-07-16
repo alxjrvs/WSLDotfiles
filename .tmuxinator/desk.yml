@@ -1,12 +1,9 @@
-# ~/.tmuxinator/dev.yml
-name: rails
-root: .
-
-# Optional tmux socket
-# socket_name: foo
+# ~/.tmuxinator/desk.yml
+name: ad
+root: ~/Code/Terrible/Cassie
 
 # Runs before everything. Use it to start daemons etc.
-#pre: pgstart
+pre: brew services start mysql && brew services start redis
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -18,9 +15,9 @@ root: .
 # tmux_command: byobu
 
 windows:
-  - server: theo 3001
+  - server: foreman start
   - ws1:
   - ws2:
   - ws3:
-  - ws4: tmux rename-session -t rails `printf '%s\n' "${PWD##*/}"`; clear
-
+  - ws4:
+  - ws5: tmux rename-session -t bench `printf '%s\n' "${PWD##*/}"`; clear

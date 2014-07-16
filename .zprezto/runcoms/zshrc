@@ -67,6 +67,9 @@ alias tks="tmux kill-session -t"
 alias tas="tmux attach-session -t"
 alias tls="tmux list-sessions"
 alias tmux="tmux -2"
+alias tbench="mux bench"
+alias trails="mux rails"
+
 
 #### .IIe. Programming (Ruby, Rails) ####
 alias fr='foreman run'
@@ -74,7 +77,7 @@ alias be="bundle exec"
 alias bake="foreman run bundle exec rake"
 alias migrate="bundle exec rake db:migrate db:test:prepare"
 alias cosb='foreman run rails'
-alias theo="foreman run rails s -p"
+alias theo="foreman start -p"
 
 genesis(){
   rails new $* --skip-test-unit -m https://raw.github.com/alxjrvs/kickoff/master/template.rb
@@ -113,6 +116,19 @@ export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
+
+## Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+export JASPER_DB55="jasperserver_pro55"
+export JASPER_HOST55="localhost"
+export JASPER_PASSWORD55="4321vela"
+export JASPER_USER55="jasper"
+export CASSIE_SLAVE_DS="vfm_slave"
+export VFM_DB_SLAVE_DS="vfm_slave"
+
+
+##Add ADB to path 
+export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools/
 
 ##Set Gopath
 export GOPATH=$HOME/Code/.go
