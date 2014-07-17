@@ -69,6 +69,10 @@ nnoremap <leader>s <C-w>s<C-w>l
 "" Shortcut to source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+""Remove Whitespace
+
+nnoremap <leader><leader> :%s/\s\+$//<cr>
+
 """" .III. Vundle """"
 
 "" Let Vundle manage Vundle
