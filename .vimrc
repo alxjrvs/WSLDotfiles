@@ -46,6 +46,11 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "" Improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
+"" Load local vimrcs
+if filereadable(glob("~/.vimrc.local")) 
+  source ~/.vimrc.local
+endif
+
 """" .II. Generic Mappings """"
 
 "" Disable Arrow Keys
@@ -101,12 +106,17 @@ let g:airline_fugitive_prefix = '⭠'
 let g:airline_readonly_symbol = '⭤'
 let g:airline_linecolumn_prefix = '⭡'
 
+"" Dash
+Bundle 'rizzatti/dash.vim'
+nmap <silent> <leader>d <Plug>DashSearch
+
 "" Programming
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
+Bundle "vim-scripts/HTML-AutoCloseTag"
 
 "" CtrlP
 Bundle "kien/ctrlp.vim"
@@ -152,7 +162,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 Bundle 'jgdavey/vim-turbux'
 let g:VimuxOrientation = "v"
 let g:no_turbux_mappings = 1
-let g:turbux_command_prefix = 'foreman run bundle exec'
+let g:turbux_command_prefix = 'bundle exec'
 map <leader>r <Plug>SendTestToTmux
 map <leader>R <Plug>SendFocusedTestToTmux
 
@@ -183,6 +193,9 @@ Bundle 'rking/ag.vim'
 
 "" Vim Unimpared
 Bundle 'tpope/vim-unimpaired'
+
+"" Go
+Plugin 'fatih/vim-go'
 
 "" Tmux Compelete
 Bundle 'wellle/tmux-complete.vim'

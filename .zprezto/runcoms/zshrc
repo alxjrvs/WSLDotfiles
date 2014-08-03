@@ -42,7 +42,7 @@ alias ls='ls -AFGp'
 
 #### .IIb. Git ####
 alias gx='gitx'
-alias ga='git add'
+alias ga='gitx'
 alias gp='git push'
 alias gs='git status'
 alias gpr='git pull --rebase'
@@ -139,3 +139,6 @@ export TERM=screen-256color
 
 ## Set Editor
 export EDITOR='vi'
+
+## Setup Direnv
+eval "$(direnv hook $0)"
