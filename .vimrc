@@ -33,8 +33,8 @@ set wrap
 set lbr
 set linespace=0
 set encoding=utf-8
-set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set list
+set listchars=tab:>-,trail:¬,extends:>,precedes:<
 set complete=.,b,u,]
 
 "" Ruby Setups
