@@ -128,7 +128,7 @@ export VFM_DB_SLAVE_DS="vfm_slave"
 
 
 ##Add ADB to path 
-export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools/
+export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 
 ##Set Gopath
 export GOPATH=$HOME/Code/.go
