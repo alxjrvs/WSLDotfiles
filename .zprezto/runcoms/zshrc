@@ -118,7 +118,8 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
 ## Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+export JAVA_HOME="/usr/libexec/java_home -v '1.6*'"
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export JASPER_DB55="jasperserver_pro55"
 export JASPER_HOST55="localhost"
 export JASPER_PASSWORD55="4321vela"
@@ -134,11 +135,12 @@ export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 export GOPATH=$HOME/Code/.go
 export PATH=$PATH:$GOPATH/bin
 
+## Motion Android
+export RUBYMOTION_ANDROID_SDK="~/android-rubymotion/sdk"
+export RUBYMOTION_ANDROID_NDK="~/android-rubymotion/ndk"
+
 ## Set Colors
 export TERM=screen-256color
 
 ## Set Editor
 export EDITOR='vi'
-
-## Setup Direnv
-eval "$(direnv hook $0)"
