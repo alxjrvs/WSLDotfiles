@@ -19,8 +19,6 @@
    #   .IIg. Toolbox
   ## .III. Environment Tweaks
 
-
-
 #### .I. Setup ####
 ## Source Prezto  htps://github.com/sorin-ionescu/prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -76,7 +74,6 @@ alias fr='foreman run'
 alias be="bundle exec"
 alias bake="foreman run bundle exec rake"
 alias migrate="bundle exec rake db:migrate db:test:prepare"
-alias cosb='foreman run rails'
 alias theo="foreman start -p"
 
 genesis(){
@@ -118,7 +115,7 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
 ## Java
-export JAVA_HOME="/usr/libexec/java_home -v '1.6*'"
+#export JAVA_HOME="/usr/libexec/java_home -v '1.6*'"
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export JASPER_DB55="jasperserver_pro55"
 export JASPER_HOST55="localhost"
