@@ -27,6 +27,9 @@
 #Rspec config
 !.rspec
 
+#Iterm Prefs
+!.iterm/*
+
 ## Tmux
 !.tmux.conf
 !.tmuxinator/
