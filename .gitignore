@@ -28,6 +28,7 @@
 !.rspec
 
 #Iterm Prefs
+!.iterm/
 !.iterm/*
 
 ## Tmux
