@@ -25,15 +25,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-## Enable Smart Hub Alias https://github.com/github/hub
-#eval "$(hub alias -s)"
-
 ## Initialize Rbenv https://github.com/sstephenson/rbenv
 eval "$(rbenv init -)"
 
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
-alias la='ls -a'
 alias ..='cd ..'
 alias code='cd ~/Code/'
 alias ls='ls -AFGp'
@@ -44,9 +40,8 @@ alias ga='gitx'
 alias gp='git push'
 alias gs='git status'
 alias gpr='git pull --rebase'
+
 alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
-alias pr='hub pull-request'
-alias gbrowse='hub browse'
 alias gc="git checkout"
 alias gcm="git commit -m"
 
@@ -65,20 +60,11 @@ alias tks="tmux kill-session -t"
 alias tas="tmux attach-session -t"
 alias tls="tmux list-sessions"
 alias tmux="tmux -2"
-alias tbench="mux bench"
-alias trails="mux rails"
-
 
 #### .IIe. Programming (Ruby, Rails) ####
 alias fr='foreman run'
-alias be="bundle exec"
 alias bake="foreman run bundle exec rake"
 alias migrate="bundle exec rake db:migrate db:test:prepare"
-alias theo="foreman start -p"
-
-genesis(){
-  rails new $* --skip-test-unit -m https://raw.github.com/alxjrvs/kickoff/master/template.rb
-}
 
 #### .IIf. Web Development ####
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
@@ -115,8 +101,6 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
 ## Java
-#export JAVA_HOME="/usr/libexec/java_home -v '1.6*'"
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export JASPER_DB55="jasperserver_pro55"
 export JASPER_HOST55="localhost"
 export JASPER_PASSWORD55="4321vela"
@@ -125,7 +109,7 @@ export CASSIE_SLAVE_DS="vfm_slave"
 export VFM_DB_SLAVE_DS="vfm_slave"
 
 
-##Add ADB to path 
+##Add ADB to path
 export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 
 ##Set Gopath
