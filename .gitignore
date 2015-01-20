@@ -1,17 +1,19 @@
 #####################################
 ####  ALXJRVS Git Configuration  ####
-####       Version 2.0.0         ####
-####        "Gilotina"           ####
+####       Version 2.0.1         ####
+####        "Bernadeth"         ####
 #####################################
 
 #### CHANGELOG
   ## 4.20.2014 2.0.0 There Came a Time When The Old Gods Died.
+  ## 1.19.2015 2.0.1 THEN - THERE WAS NEW LIGHT!
+    # - vim -> neovim
 
 ## Ignore everything by default
 *
 
-## Vim configs
-!.vimrc
+## NeoVim configs
+!.nvimrc
 
 ## Git configs
 !.gitignore_global

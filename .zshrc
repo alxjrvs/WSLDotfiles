@@ -1,11 +1,14 @@
 #################################
 ####  ALXJRVS Shell Profile  ####
-####      Version 2.0.0      ####
-####        "Metron"         ####
+####      Version 2.0.1      ####
+####       "Lightray"        ####
 #################################
 
 #### CHANGELOG
   ## 4.20.2014 2.0.0 There Came a Time When The Old Gods Died.
+  ## 1.19.2015 2.0.1  THEN—THERE WAS NEW LIGHT!
+    # - vim -> neovim
+
 
 #### Contents ####
   ## .I. Setup
@@ -41,7 +44,7 @@ alias gp='git push'
 alias gs='git status'
 alias gpr='git pull --rebase'
 
-alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs vim"
+alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs nvim"
 alias gc="git checkout"
 alias gcm="git commit -m"
 
@@ -50,10 +53,10 @@ gcb() {
 }
 
 #### .IIc. Vim ####
-alias vinstall="vim +BundleInstall +qall"
-alias vclean="vim +BundleClean +qall"
-alias vupdate="vim +BundleUpdate +qall"
-alias v="vim"
+alias vinstall="nvim +BundleInstall +qall"
+alias vclean="nvim +BundleClean +qall"
+alias vupdate="nvim +BundleUpdate +qall"
+alias v="nvim"
 
 #### .IId. Tmux ####
 alias tks="tmux kill-session -t"
