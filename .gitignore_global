@@ -27,6 +27,10 @@ config/database.yml
 *.so
 tags
 
+## Vim
+.*.swp
+.*.swo
+
 ## Packages 
 *.7z
 *.dmg
