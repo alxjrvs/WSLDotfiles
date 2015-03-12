@@ -28,10 +28,9 @@ config/database.yml
 tags
 
 ## Vim
-.*.swp
-.*.swo
+.*.sw*
 
-## Packages 
+## Packages
 *.7z
 *.dmg
 *.gz
