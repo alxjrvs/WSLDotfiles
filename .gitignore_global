@@ -27,7 +27,10 @@ config/database.yml
 *.so
 tags
 
-## Packages 
+## Vim
+*.sw*
+
+## Packages
 *.7z
 *.dmg
 *.gz
@@ -54,3 +57,10 @@ ehthumbs.db
 Thumbs.db
 
 *.dump
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~

@@ -1,11 +1,15 @@
 """""""""""""""""""""""""""""""""
-""""  ALXJRVS Shell Profile  """"
-""""      Version 2.0.0      """"
-""""        "Metron"         """"
+""""  ALXJRVS Vim Profile    """"
+""""      Version 2.0.1      """"
+""""       "MotherBoxx"      """"
 """""""""""""""""""""""""""""""""
 
 """" CHANGELOG
   "" 4.20.2014 2.0.0 There Came a Time When The Old Gods Died.
+  "" 1.19.2015 2.0.1  THEN—THERE WAS NEW LIGHT!
+    " - vim -> neovim
+  "" 3.08.2015 2.0.2  Perfectionists are their own devils.
+    " added Better whitespace.
 
 """" Contents """"
   "" .I. Setup
@@ -17,7 +21,6 @@
 filetype off
 syn on
 
-set nocompatible
 set t_Co=256
 set ruler
 set wrap
@@ -33,8 +36,8 @@ set wrap
 set lbr
 set linespace=0
 set encoding=utf-8
-set list
-set listchars=tab:>-,trail:¬,extends:>,precedes:<
+"set list
+"set listchars=tab:-,trail:¬,extends:>,precedes:<
 set complete=.,b,u,]
 
 "" Ruby Setups
@@ -78,7 +81,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <leader><leader> :%s/\s\+$//<cr>
 
-"""" .III. Vundle """"
+""""" .III. Vundle """"
 
 "" Let Vundle manage Vundle
 set rtp+=~/.vim/bundle/vundle
@@ -199,6 +202,9 @@ Plugin 'fatih/vim-go'
 
 "" Tmux Compelete
 Bundle 'wellle/tmux-complete.vim'
+
+"" Better Whitespace
+Bundle 'ntpeters/vim-better-whitespace' 
 
 "" Hacky End-Of-File stuff
 syntax on
