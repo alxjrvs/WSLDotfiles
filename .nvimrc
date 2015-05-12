@@ -84,20 +84,20 @@ nnoremap <leader><leader> :%s/\s\+$//<cr>
 """"" .III. Vundle """"
 
 "" Let Vundle manage Vundle
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 "" Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "" Nerdcommenter
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 "" Handlebars
-Bundle 'juvenn/mustache.vim'
+Plugin 'juvenn/mustache.vim'
 
 "" Airline
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 set laststatus=2
 set fillchars=diff:·
@@ -110,36 +110,35 @@ let g:airline_readonly_symbol = '⭤'
 let g:airline_linecolumn_prefix = '⭡'
 
 "" Dash
-Bundle 'rizzatti/dash.vim'
+Plugin 'rizzatti/dash.vim'
 nmap <silent> <leader>d <Plug>DashSearch
 
 "" Programming
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'Townk/vim-autoclose'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'sunaku/vim-ruby-minitest'
-Bundle "vim-scripts/HTML-AutoCloseTag"
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'Townk/vim-autoclose'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'sunaku/vim-ruby-minitest'
+Plugin 'vim-scripts/HTML-AutoCloseTag'
 
 "" CtrlP
-Bundle "kien/ctrlp.vim"
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
 "" Surround Vim
-Bundle 'tpope/vim-surround.git'
+Plugin 'tpope/vim-surround.git'
 
 " Colorscheme
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 set background=dark
-colorscheme solarized
 
 "" Headlights
-Bundle 'mbadran/headlights'
+Plugin 'mbadran/headlights'
 
 "" Vimux
-Bundle 'benmills/vimux'
+Plugin 'benmills/vimux'
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "25"
 
@@ -153,7 +152,7 @@ map ri :VimuxInspectRunner<cr>
 map rx :VimuxCloseRunner<cr>
 
 "indent-guides
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 let g:indent_guides_start_level=2
@@ -162,7 +161,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 
 "" Turbux
-Bundle 'jgdavey/vim-turbux'
+Plugin 'jgdavey/vim-turbux'
 let g:VimuxOrientation = "v"
 let g:no_turbux_mappings = 1
 let g:turbux_command_prefix = 'bundle exec'
@@ -170,44 +169,48 @@ map <leader>r <Plug>SendTestToTmux
 map <leader>R <Plug>SendFocusedTestToTmux
 
 "" CoffeeScript
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 "" Tlib vim
-Bundle 'tomtom/tlib_vim'
+Plugin 'tomtom/tlib_vim'
 
 "" Vim Addon MW Utils
-Bundle 'MarcWeber/vim-addon-mw-utils'
+Plugin 'MarcWeber/vim-addon-mw-utils'
 
 "" VimHaml
-Bundle 'tpope/vim-haml'
+Plugin 'tpope/vim-haml'
 
 "" Syntastic
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 
 "" Sensible Defaults
-Bundle 'tpope/vim-sensible'
+Plugin 'tpope/vim-sensible'
 
 "" Supertab
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 
 "" Silver Searcher
-Bundle 'rking/ag.vim'
+Plugin 'rking/ag.vim'
 
 "" Vim Unimpared
-Bundle 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-unimpaired'
 
 "" Go
 Plugin 'fatih/vim-go'
 
 "" Tmux Compelete
-Bundle 'wellle/tmux-complete.vim'
+Plugin 'wellle/tmux-complete.vim'
 
 "" Better Whitespace
-Bundle 'ntpeters/vim-better-whitespace' 
+Plugin 'ntpeters/vim-better-whitespace' 
+
+call vundle#end()
+
+syntax on
+colorscheme solarized
 
 "" Hacky End-Of-File stuff
-syntax on
 filetype off
 filetype on
 filetype plugin indent on

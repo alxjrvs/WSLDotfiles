@@ -23,13 +23,14 @@
   ## .III. Environment Tweaks
 
 #### .I. Setup ####
-## Source Prezto  htps://github.com/sorin-ionescu/prezto
+## Source Prezto  https://github.com/sorin-ionescu/prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-## Initialize Rbenv https://github.com/sstephenson/rbenv
-eval "$(rbenv init -)"
+## Initialize chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
@@ -95,22 +96,12 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 ## Hack to stop Zshell from renaming tmux
 DISABLE_AUTO_TITLE=true
 
-
 ## Ruby Performance Tweaks
 export RUBY_GC_HEAP_INIT_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
-
-## Java
-export JASPER_DB55="jasperserver_pro55"
-export JASPER_HOST55="localhost"
-export JASPER_PASSWORD55="4321vela"
-export JASPER_USER55="jasper"
-export CASSIE_SLAVE_DS="vfm_slave"
-export VFM_DB_SLAVE_DS="vfm_slave"
-
 
 ##Add ADB to path
 export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
