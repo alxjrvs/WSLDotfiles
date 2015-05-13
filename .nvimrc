@@ -134,9 +134,6 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'altercation/vim-colors-solarized'
 set background=dark
 
-"" Headlights
-Plugin 'mbadran/headlights'
-
 "" Vimux
 Plugin 'benmills/vimux'
 let g:VimuxOrientation = "h"
