@@ -35,15 +35,6 @@
 
 ## Tmux
 !.tmux.conf
-!.tmuxinator/
-!.tmuxinator/*
-
-## Atom
-!.atom/config.cson
-!.atom/keymap.cson
-!.atom/snippets.cson
-!.atom/init.coffee
-!.atom/styles.less
 
 ## Tips sheet
 !.tip_sheet
