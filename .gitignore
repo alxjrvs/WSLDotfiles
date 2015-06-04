@@ -39,7 +39,6 @@
 !.tmuxinator/*
 
 ## Atom
-!.atom/packages/*/*
 !.atom/config.cson
 !.atom/keymap.cson
 !.atom/snippets.cson
