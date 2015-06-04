@@ -32,6 +32,9 @@ fi
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
+#Set default chruby
+chruby ruby-2.2.1
+
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
 alias ..='cd ..'
