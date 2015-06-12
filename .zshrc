@@ -121,7 +121,7 @@ export RUBYMOTION_ANDROID_NDK="~/android-rubymotion/ndk"
 export TERM=screen-256color
 
 ## Set Editor
-export EDITOR='vi'
+export EDITOR=/usr/local/bin/atom
 
 ## Python
 export PYENV_ROOT="/usr/local/opt/pyenv"
