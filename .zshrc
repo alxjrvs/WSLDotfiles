@@ -42,7 +42,6 @@ alias code='cd ~/Code/'
 alias ls='ls -AFGp'
 
 #### .IIb. Git ####
-alias gx='gitx'
 alias ga='gitx'
 alias gp='git push'
 alias gs='git status'
@@ -56,11 +55,12 @@ gcb() {
   (git checkout -b $*; git push -u origin $*)
 }
 
-#### .IIc. Vim ####
+#### .IIc. Editors ####
 alias vinstall="nvim +BundleInstall +qall"
 alias vclean="nvim +BundleClean +qall"
 alias vupdate="nvim +BundleUpdate +qall"
 alias v="nvim"
+alias a="atom ."
 
 #### .IId. Tmux ####
 alias tks="tmux kill-session -t"
