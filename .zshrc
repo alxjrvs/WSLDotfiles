@@ -55,6 +55,13 @@ gcb() {
   (git checkout -b $*; git push -u origin $*)
 }
 
+grade(){
+  (mkdir $*; mv archive.tar $*; cd $*; tar xopf archive.tar)
+}
+
+grade_3(){
+  (dropdb grocery_list; createdb grocery_list; psql grocery_list < schema.sql; psql grocery_list < data.sql;)
+}
 #### .IIc. Editors ####
 alias vinstall="nvim +BundleInstall +qall"
 alias vclean="nvim +BundleClean +qall"
