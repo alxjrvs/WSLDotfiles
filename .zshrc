@@ -131,6 +131,6 @@ export TERM=screen-256color
 export EDITOR=/usr/local/bin/atom
 
 ## Python
-export PYENV_ROOT="/usr/local/opt/pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="/usr/local/opt/pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
