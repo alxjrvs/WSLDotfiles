@@ -26,15 +26,16 @@
 !.zprezto/runcoms/
 !.zprezto/runcoms/*
 
+## .Configure files
+!.config/
+!.config/*
+
 #Rspec config
 !.rspec
 
 #Iterm Prefs
 !.iterm/
 !.iterm/*
-
-## Tmux
-!.tmux.conf
 
 ## Tips sheet
 !.tip_sheet
