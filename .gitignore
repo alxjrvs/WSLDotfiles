@@ -26,10 +26,6 @@
 !.zprezto/runcoms/
 !.zprezto/runcoms/*
 
-## .Configure files
-!.config/
-!.config/*
-
 #Rspec config
 !.rspec
 
