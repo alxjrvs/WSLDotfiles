@@ -13,7 +13,7 @@
 *
 
 ## NeoVim configs
-!.nvimrc
+# !.nvimrc
 
 ## Git configs
 !.gitignore_global
