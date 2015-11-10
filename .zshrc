@@ -63,22 +63,15 @@ grade_3(){
   (dropdb grocery_list; createdb grocery_list; psql grocery_list < schema.sql; psql grocery_list < data.sql;)
 }
 #### .IIc. Editors ####
-alias vinstall="nvim +BundleInstall +qall"
-alias vclean="nvim +BundleClean +qall"
-alias vupdate="nvim +BundleUpdate +qall"
-alias v="nvim"
+alias vinstall="nvim +PlugInstall +qall"
+alias vclean="nvim +PlugClean +qall"
+alias vupdate="nvim +PlugUpdate +qall"
+alias v="nvim -u .nvimrc"
 alias a="atom ."
 
-#### .IId. Tmux ####
-alias tks="tmux kill-session -t"
-alias tas="tmux attach-session -t"
-alias tls="tmux list-sessions"
-alias tmux="tmux -2"
+#### .IId. (Open) ####
 
 #### .IIe. Programming (Ruby, Rails) ####
-alias fr='foreman run'
-alias bake="foreman run bundle exec rake"
-alias migrate="bundle exec rake db:migrate db:test:prepare"
 
 #### .IIf. Web Development ####
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
