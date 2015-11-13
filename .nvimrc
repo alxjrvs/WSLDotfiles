@@ -1,5 +1,4 @@
 " O.M.A.C        
-
 call plug#begin('~/.nvim/plugged') " vim-plug
 
 " colorscheme
@@ -7,12 +6,6 @@ Plug 'altercation/vim-colors-solarized'
 
 " Rails support (:A, :R, :Rmigration, :Rextract)
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] } 
-
-" String interpolation helper
-Plug 'p0deje/vim-ruby-interpolation', { 'for': ['ruby'] } 
-
-" Refactoring tools
-Plug 'ecomba/vim-ruby-refactoring', { 'for': ['ruby'] } 
 
 " Multi-language testing support (uses NeoTerm)
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
@@ -32,17 +25,8 @@ Plug 'KabbAmine/vCoolor.vim', { 'on': 'VCoolor' }
 " Neovim terminal improving
 Plug 'kassio/neoterm', { 'on': 'T' }
 
-" Asynchronous maker and linter (Asynchronous runner, needs linters to work properly)
-Plug 'benekastah/neomake', { 'on': ['Neomake'] }
-
-" Surround (cs"')
-Plug 'tpope/vim-surround'
-
-" Easy alignment
-Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
-
+Plug 'godlygeek/tabular'       "alignment
 Plug 'cakebaker/scss-syntax.vim' " SCSS syntax
-Plug 'cohama/lexima.vim'       " Automatically closing stuff
 Plug 'tpope/vim-haml'          " Haml syntax
 Plug 'tpope/vim-endwise'       " add 'end' to code blocks
 Plug 'tpope/vim-fugitive'      " use 'git'
@@ -138,8 +122,8 @@ set background=dark
 colorscheme solarized
 
 "Filetype Settings
-autocmd FileType ruby,coffee,sass,scss,haml,slim,vim setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=12
-autocmd FileType html,htmldjango,xhtml,css,javascript,javascript.jsx,snippets setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
+" autocmd FileType ruby,coffee,sass,scss,haml,slim,vim setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=12
+" autocmd FileType html,htmldjango,xhtml,css,javascript,javascript.jsx,snippets setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 
 " Highlight term cursor differently
 highlight TermCursor ctermfg=green guifg=green

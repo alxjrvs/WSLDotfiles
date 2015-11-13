@@ -66,7 +66,7 @@ grade_3(){
 alias vinstall="nvim +PlugInstall +qall"
 alias vclean="nvim +PlugClean +qall"
 alias vupdate="nvim +PlugUpdate +qall"
-alias v="nvim -u .nvimrc"
+alias v="nvim -u ~/.nvimrc"
 alias a="atom ."
 
 #### .IId. (Open) ####
@@ -121,7 +121,7 @@ export RUBYMOTION_ANDROID_NDK="~/android-rubymotion/ndk"
 export TERM=screen-256color
 
 ## Set Editor
-export EDITOR=/usr/local/bin/atom
+export EDITOR=/usr/local/bin/nvim
 
 ## Python
 # export PYENV_ROOT="/usr/local/opt/pyenv"
