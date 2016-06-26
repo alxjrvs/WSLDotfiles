@@ -33,7 +33,7 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 #Set default chruby
-chruby ruby-2.2.1
+chruby ruby-2.3.1
 
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
@@ -47,14 +47,6 @@ alias gp='git push'
 alias gs='git status'
 alias gpr='git pull --rebase'
 
-alias conflicts="git ls-files --unmerged | cut -f2 | uniq | xargs nvim"
-alias gc="git checkout"
-alias gcm="git commit -m"
-
-gcb() {
-  (git checkout -b $*; git push -u origin $*)
-}
-
 grade(){
   (mkdir $*; mv archive.tar $*; cd $*; tar xopf archive.tar)
 }
@@ -62,27 +54,23 @@ grade(){
 grade_3(){
   (dropdb grocery_list; createdb grocery_list; psql grocery_list < schema.sql; psql grocery_list < data.sql;)
 }
+
 #### .IIc. Editors ####
 alias vinstall="nvim +PlugInstall +qall"
 alias vclean="nvim +PlugClean +qall"
 alias vupdate="nvim +PlugUpdate +qall"
 alias v="nvim -u ~/.nvimrc"
-alias a="atom ."
 
 #### .IId. (Open) ####
 
 #### .IIe. Programming (Ruby, Rails) ####
 
 #### .IIf. Web Development ####
-alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
-alias db_restore='pg_restore --verbose --clean --no-acl --no-owner'
 
 #### .IIg. Toolbox ####
-alias swpk='rm .*.*.swp'
 alias rsync="rsync -rzhP"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
-alias tips='vim ~/.tip_sheet'
 
 kill_port() {
    lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill | echo "Killed servers on port $*"
@@ -112,10 +100,6 @@ export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 ##Set Gopath
 export GOPATH=$HOME/Code/.go
 export PATH=$PATH:$GOPATH/bin
-
-## Motion Android
-export RUBYMOTION_ANDROID_SDK="~/android-rubymotion/sdk"
-export RUBYMOTION_ANDROID_NDK="~/android-rubymotion/ndk"
 
 ## Set Colors
 export TERM=screen-256color
