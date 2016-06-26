@@ -25,6 +25,7 @@
 !.zprezto/
 !.zprezto/runcoms/
 !.zprezto/runcoms/*
+!.zpreztorc
 
 #Rspec config
 !.rspec
