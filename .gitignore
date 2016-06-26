@@ -24,7 +24,7 @@
 !.zsh/_git
 !.zprezto/
 !.zprezto/runcoms/
-!.zprezto/runcoms/*
+!.zprezto/runcoms/zpreztorc
 !.zpreztorc
 
 #Rspec config
