@@ -33,7 +33,7 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 #Set default chruby
-chruby ruby-2.3.1
+chruby ruby-2.3.0
 
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
@@ -47,19 +47,13 @@ alias gp='git push'
 alias gs='git status'
 alias gpr='git pull --rebase'
 
-grade(){
-  (mkdir $*; mv archive.tar $*; cd $*; tar xopf archive.tar)
-}
-
-grade_3(){
-  (dropdb grocery_list; createdb grocery_list; psql grocery_list < schema.sql; psql grocery_list < data.sql;)
-}
-
 #### .IIc. Editors ####
 alias vinstall="nvim +PlugInstall +qall"
 alias vclean="nvim +PlugClean +qall"
 alias vupdate="nvim +PlugUpdate +qall"
 alias v="nvim -u ~/.nvimrc"
+
+alias a="atom ."
 
 #### .IId. (Open) ####
 
@@ -106,3 +100,6 @@ export TERM=screen-256color
 
 ## Set Editor
 export EDITOR=/usr/local/bin/nvim
+
+export NVM_DIR="/Users/Jrvs/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

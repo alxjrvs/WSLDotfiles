@@ -27,6 +27,8 @@ Plug 'kassio/neoterm', { 'on': 'T' }
 
 Plug 'godlygeek/tabular'       "alignment
 Plug 'cakebaker/scss-syntax.vim' " SCSS syntax
+Plug 'leafgarland/typescript-vim' " Typescript Syntax
+Plug 'ryanoasis/vim-devicons' " Typescript Syntax
 Plug 'tpope/vim-haml'          " Haml syntax
 Plug 'tpope/vim-endwise'       " add 'end' to code blocks
 Plug 'tpope/vim-fugitive'      " use 'git'
