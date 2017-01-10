@@ -101,5 +101,5 @@ export TERM=screen-256color
 ## Set Editor
 export EDITOR=/usr/local/bin/nvim
 
-export NVM_DIR="/Users/Jrvs/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
