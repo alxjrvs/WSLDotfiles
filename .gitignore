@@ -22,10 +22,11 @@
 
 ## Zshrc configs
 !.zsh/_git
-!.zprezto/
+!.zprezto/*
 !.zprezto/runcoms/
 !.zprezto/runcoms/zpreztorc
 !.zpreztorc
+!.zsh/*
 
 #Rspec config
 !.rspec

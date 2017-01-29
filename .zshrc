@@ -33,7 +33,7 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 #Set default chruby
-chruby ruby-2.3.0
+chruby ruby-2.4.0
 
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
@@ -103,3 +103,5 @@ export EDITOR=/usr/local/bin/nvim
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
