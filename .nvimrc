@@ -30,6 +30,7 @@ Plug 'cakebaker/scss-syntax.vim' " SCSS syntax
 Plug 'leafgarland/typescript-vim' " Typescript Syntax
 Plug 'ryanoasis/vim-devicons' " Typescript Syntax
 Plug 'tpope/vim-haml'          " Haml syntax
+Plug 'joukevandermaas/vim-ember-hbs' " handlebars ember support
 Plug 'tpope/vim-endwise'       " add 'end' to code blocks
 Plug 'tpope/vim-fugitive'      " use 'git'
 Plug 'vim-ruby/vim-ruby'       " vim ruby
@@ -45,6 +46,8 @@ Plug 'leshill/vim-json'
 Plug 'ervandew/supertab'       " tab completion
 Plug 'godlygeek/tabular'       " aligning text
 Plug 'kien/ctrlp.vim'          " fuzzy file finder
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|bower_components)|(\.(swp|ico|git|svn))$'
 Plug 'losingkeys/vim-stopsign' " expand 'dbg' to statements that stop your program
 Plug 'rking/ag.vim'            " use the 'ag' search tool
 Plug 'scrooloose/syntastic'    " syntax checking

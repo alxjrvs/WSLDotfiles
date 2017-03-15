@@ -33,7 +33,7 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 #Set default chruby
-chruby ruby-2.3.0
+chruby ruby-2.3.1
 
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
@@ -42,7 +42,7 @@ alias code='cd ~/Code/'
 alias ls='ls -AFGp'
 
 #### .IIb. Git ####
-alias ga='gitx'
+alias gx='gitx'
 alias gp='git push'
 alias gs='git status'
 alias gpr='git pull --rebase'
@@ -75,6 +75,9 @@ kill_port() {
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
+## Adding Sbin to $PATH
+export PATH="/usr/local/sbin:$PATH"
+
 ## Enable Zsh Completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -103,3 +106,17 @@ export EDITOR=/usr/local/bin/nvim
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+## Zipcar 
+make_sav() {
+ awk '/instances/{gsub(/[0-9]/, "1")}; 1' som_dogfood.yaml > dev_dogfood.yaml
+ sed -e '/lmz/{N;N;d;}' dev_dogfood.yaml > dev_dogfood2.yaml
+
+ mv dev_dogfood2.yaml dev_dogfood.yaml
+
+ echo "- name: dev-tools" >> dev_dogfood.yaml
+ echo "  version: v0-27-0" >> dev_dogfood.yaml
+ echo "  instances: 1" >> dev_dogfood.yaml
+ mv dev_dogfood.yaml $HOME
+ sav init $HOME/dev_dogfood.yaml
+}
