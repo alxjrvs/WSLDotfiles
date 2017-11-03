@@ -133,3 +133,7 @@ colorscheme solarized
 " Highlight term cursor differently
 highlight TermCursor ctermfg=green guifg=green
 
+highlight ws ctermbg=red guibg=red
+match ws /\s\+$/
+autocmd BufWinEnter * match ws / \+$/
+

@@ -40,6 +40,7 @@ chruby ruby-2.3.1
 alias ..='cd ..'
 alias code='cd ~/Code/'
 alias ls='ls -AFGp'
+alias rm="rm -i"
 
 #### .IIb. Git ####
 alias gx='gitx'
@@ -120,3 +121,25 @@ make_sav() {
  mv dev_dogfood.yaml $HOME
  sav init $HOME/dev_dogfood.yaml
 }
+
+resetEmber() {
+  echo "Uninstalling Ember. . ."
+  npm uninstall -g ember-cli
+  echo "Cleaning NPM + Bower cache. . ."
+  npm cache clean --force
+  bower cache clean
+  echo "Install ember-cli 2.11.0. . ."
+  npm install -g ember-cli@2.11.0
+  echo "Clearing out node_modules, bower_components, dist, and tmp. . ."
+  rm -rf node_modules bower_components dist tmp
+  echo "NPM install ember-cli 2.11.0 (save-dev). . ."
+  npm install --save-dev ember-cli@2.11.0
+  echo "NPM install + Bower install . . ."
+  rm package-lock.json
+  npm install
+  bower install
+  echo "Ember init. Good luck!"
+  ember init
+}
+
+export PATH="$HOME/.yarn/bin:$PATH"
