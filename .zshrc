@@ -38,7 +38,10 @@ chruby ruby-2.4.0
 #### .II. Aliases ####
 #### .IIa. Command Line Navigation ####
 alias ..='cd ..'
-alias code='cd ~/Code/'
+# Alas, Poor Alias. You were my first. VsCode killed you, God Damn it. 
+# I'll never, Ever forget you. 
+#  - 3/5/18 - 
+# alias code='cd ~/Code/'
 alias ls='ls -AFGp'
 
 #### .IIb. Git ####
